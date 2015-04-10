@@ -1,0 +1,12 @@
+[ 2015-04-07T20:04:32+08:00 ] 127.0.0.1 /blogs/Public/fonts/lato/lato-regular.woff
+ERR: 无法加载模块:Public
+
+[ 2015-04-07T20:04:32+08:00 ] 127.0.0.1 /blogs/Public/fonts/lato/lato-bold.woff
+ERR: 无法加载模块:Public
+
+[ 2015-04-07T20:04:33+08:00 ] 127.0.0.1 /blogs/Public/fonts/lato/lato-regular.ttf
+ERR: 无法加载模块:Public
+
+[ 2015-04-07T20:04:33+08:00 ] 127.0.0.1 /blogs/Public/fonts/lato/lato-bold.ttf
+ERR: 无法加载模块:Public
+

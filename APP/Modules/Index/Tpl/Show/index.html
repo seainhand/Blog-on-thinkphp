@@ -1,0 +1,46 @@
+
+		<include file ='Common:header'/>
+	<link rel="stylesheet" href="__PUBLIC__/Css/show.css" />
+	<link rel="stylesheet" type="text/css" href="__ROOT__/Data/Ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+	<script type="text/javascript" src="__ROOT__/Data/Ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+
+<body>	
+		<include file ='Common:nav'/>
+<!--主体-->
+	<include file ='Common:main-layout'/>
+
+		<div  class="row">
+		<div class='col-md-2'></div>
+		<div class='main-left col-md-6'>
+		<div class='main-left'>
+				<div class='location' align="left">
+					<a href="">首页</a>>
+					<php>$last=count($parent)-1;</php>
+					<foreach name='parent' item='v'>
+						<a href="{:U('/c_' . $v['id'])}">{$v.name}</a><if condition='$key neq $last'>></if>
+					</foreach>
+				</div>
+				<div class="title">
+					<p>{$blog.title}</p>
+					<div>
+						<span class='fl'>发布于：{$blog.time|date='y年m月d日 H:i:s',###}</span>
+						<span class='fr'>{$blog.click}</span>
+					</div>
+				</div>
+				<div class='content' style='word-break:break-all'>
+				{$blog.content}
+				</div>
+	 	</div>
+	 	</div>		
+	    <div class='col-md-1'></div>
+ 
+	<!--主体右侧-->
+		
+		<include file ='Common:right'/>
+	</div>
+<!--底部-->
+
+		<include file ='Common:bottom'/>

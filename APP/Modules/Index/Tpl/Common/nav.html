@@ -1,0 +1,39 @@
+
+<!--头部-->
+ 
+<?php
+
+		$cate = M('cate')->order('sort')->select(); 
+		import('Class.Category',APP_PATH);
+		$cate = Category::unlimitedForLayer($cate);
+?>
+ 
+
+	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+	        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		          </button>
+		          <a class="navbar-brand" href="__GROUP__">你好哇</a>
+	        </div>
+			<div class="navbar-collapse collapse"> 
+				<ul class="nav navbar-nav">
+			 		<foreach name='cate' item='v'>
+						<li class='nav-lv1-li dropdown' >
+							<a href="{:U('/c_' . $v['id'])}" class='top-cate dropdown-toggle'>{$v.name}</a>
+							<if condition = '$v["child"]'>					
+								<ul  class="dropdown-menu dropdown-menu-inverse" role="menu">
+			 						<foreach name='v.child' item='value'>
+										<li><a href="{:U('/c_' . $v['id'])}">{$value.name}</a></li>
+									</foreach>
+								</ul>
+							</if>	
+						</li>
+					</foreach> 
+					<li class="navbar-right "><a href="__ROOT__/Admin/Login/index">Admin</a></li>
+					<li class="navbar-right "><a href="__ROOT__/Message/index">留言板</a></li>
+				</ul>
+			</div>	
+	    </div>	
+    </div>

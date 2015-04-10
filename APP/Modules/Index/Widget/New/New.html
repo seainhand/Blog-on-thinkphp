@@ -1,0 +1,13 @@
+
+
+			<dl>
+				<dt>最发布发</dt>
+					<foreach name='blog' item='v'>
+						<dd>
+							<a href="{:U('/' . $v['id'])}" target='_blank'>{$v.title}</a>
+							<span>{$v.time|date='y-m-d H:i',###}</span>
+						</dd>
+					</foreach>	
+	 
+ 
+			</dl>

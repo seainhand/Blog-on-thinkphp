@@ -1,0 +1,40 @@
+
+		<include file ='Common:header'/> 
+
+<body >
+		<include file ='Common:nav'/>
+<!--主体-->
+	<div  class="row">
+		<div class='col-md-2'></div>
+		<div class='main-left col-md-6'>
+		<div class='main-left'>
+			<foreach name='blog' item='v'>
+				<dl>
+
+					<dt class='channel'>{$v.title}</dd>
+					<dd>{$v.name}</dt>
+					<dd class='info'>
+						<span class='time'>发布于：{$v.time|date='y年m月d日 H:i:s',###}</span>
+						<span class='click'>点击：{$v.click}</span>
+					</dd>
+					<dd class='summary'>{$v.summary}</dd>
+					<dd class='content' id="{$v.id}"   onclick="changec(this)" >{$v.content}</dd>
+
+					<dd class='read'>
+						<a href="{:U('/' . $v['id'])}" target='_blank'>阅读全文>></a>
+					</dd>
+  
+				</dl>
+			</foreach> 
+		</div>
+	</div>
+		 
+		<div class='col-md-1'></div>
+	<!--主体右侧-->
+
+		<include file ='Common:right'/>
+	</div>
+
+<!--底部-->
+
+		<include file ='Common:bottom'/>

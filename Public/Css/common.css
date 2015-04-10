@@ -1,0 +1,26 @@
+  .footer{
+	background-color: #BDC3C7;
+	 min-height: 100px;
+	  min-width: 1440px;
+	  margin-left: -230px;
+}
+ 
+.footer_inner{ top:45px ;left:0px;width:100%}
+.nav-down-inner{width:100%;margin:0; ;top:0px}
+.nav-down-inner,
+.navigation-down-inner{margin:auto;width:1200px; }
+.nav-down-inner dl{float:left;margin:18px 80px 18px 0}
+.inner-1 dl{margin:20px 80px 25px 0}
+.inner-1 dt{font:normal 16px "microsoft yahei";color:#61789e;padding-bottom:10px;border-bottom:1px solid #61789e;margin-bottom:10px}
+.inner-1 dd a{color:#808080;font:normal 14px/30px "microsoft yahei"}
+.inner-1 dd a:hover{color:#60aff6}
+.inner_2 dd a,
+.navigation-down.inner-3 dd a{color:#fff;font:normal 16px "microsoft yahei"}
+ 
+
+.main-left{
+	text-align: left;
+}
+.content{ 
+			cursor:pointer;
+}

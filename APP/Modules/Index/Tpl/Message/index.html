@@ -1,0 +1,60 @@
+
+	<include file ='Common:header'/>
+	<link rel="stylesheet" href="__PUBLIC__/Css/show.css" />
+ 
+
+<body>	
+		<include file ='Common:nav'/>
+<!--主体-->
+	<include file ='Common:main-layout'/>
+
+	<div  class="row">
+		<div class='col-md-2'></div>
+		<div class='main-left col-md-6'>
+		<div class='main-left'>
+			<foreach name='message' item='v'>
+				<dl> 
+					<dt class='username'>{$v.username}</dd> 
+					<dd class='info'>
+						<span class='time'>发布于：{$v.time|date='y年m月d日 H:i:s',###}</span> 
+					</dd> 
+					<dd class='content'>{$v.content}</dd>
+ 
+				</dl>
+			</foreach> 
+
+			<form action = "{:U(GROUP_NAME . '/Message/addMessage')}" method = 'post'>
+			<table class='table'>
+				<tr> 
+					<th colspan = "2">添加评论</th>
+				</tr>
+				<tr>
+					<td align="right">用户名：</td>
+					<td>
+						<input type = "text" name = "username"/>
+					</td>
+				</tr>
+				<tr>
+					<td align = "right">评论:</td>
+					<td>
+						<textarea name='content'></textarea>
+					</td>
+				</tr>
+				<tr> 
+					<td colspan = "2" align = "center"> 
+						<input type = "submit" value = "保存添加"/>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</div>	
+	</div>	
+	    <div class='col-md-1'></div>
+ 
+	<!--主体右侧-->
+		
+		<include file ='Common:right'/>
+	</div>
+<!--底部-->
+
+		<include file ='Common:bottom'/>
